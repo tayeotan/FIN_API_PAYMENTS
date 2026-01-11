@@ -1,0 +1,1 @@
+docker build -t taniaortiz0/payment-api:latest ./app
