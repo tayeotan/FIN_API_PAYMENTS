@@ -21,6 +21,7 @@ jobs:
       with:
         workload_identity_provider: projects/427071317518/locations/global/workloadIdentityPools/github-pool/providers/github-provider
         service_account: workflow-gke-fin-devops@project-1d652b8e-9917-43c0-a20.iam.gserviceaccount.com
+        project_id: project-1d652b8e-9917-43c0-a20
 
     - name: Set up gcloud
       uses: google-github-actions/setup-gcloud@v2
