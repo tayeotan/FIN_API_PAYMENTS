@@ -1,4 +1,4 @@
-# Financial Payments API - DevOps Pipeline Project
+# Financial Payments API - DevOps Pipeline
 
 A production-ready payment processing API built with PowerShell, containerized with Docker, and deployed to Google Kubernetes Engine (GKE) with automated CI/CD pipelines.
 
@@ -34,26 +34,19 @@ The application showcases modern DevOps practices including Infrastructure as Co
 
 ## 🏗️ Project Structure
 
-FIN_API_PAYMENTS/
-├── app/
-│ ├── src/
-│ │ └── server.ps1 # PowerShell HTTP server handling API requests
-│ ├── healthcheck.ps1 # Health check script for container probes
-│ └── Dockerfile # Container image definition
-├── k8s/
-│ ├── namespace.yaml # Kubernetes namespace for resource isolation
-│ ├── deployment.yaml # Deployment configuration with 2 replicas
-│ ├── service.yaml # ClusterIP service exposing pods internally
-│ └── ingress.yaml # NGINX ingress for external access
-├── .github/
-│ └── workflows/
-│ └── deploy.yaml # GitHub Actions CI/CD pipeline
-├── scripts/
-│ ├── build.ps1 # Local Docker build script
-│ ├── cleanup.ps1 # Cleanup script for testing
-│ └── deploy.ps1 # Local deployment script
-└── README.md # Project documentation (this file)
+`server.ps1`: PowerShell HTTP server handling API requests
+`healthcheck.ps1`: Health check script for container probes
+`Dockerfile`: Container image definition
 
+`namespace.yaml`: Kubernetes namespace for resource isolation
+`deployment.yaml`: Deployment configuration with 2 replicas
+`service.yaml`: ClusterIP service exposing pods internally
+`ingress.yaml`: NGINX ingress for external access
+
+`deploy.yaml`: GitHub Actions CI/CD pipeline
+`build.ps1`: Local Docker build script
+`cleanup.ps1`: Cleanup script for testing
+`deploy.ps1`: Local deployment script
 
 ### File Descriptions
 
@@ -122,18 +115,6 @@ FIN_API_PAYMENTS/
 
 ---
 
-## 🚀 Deployment Architecture
-
-                    Internet
-                       ↓
-              [NGINX Ingress Controller]
-                (34.29.49.247:80)
-                       ↓
-              [Service: payment-api]
-                  (ClusterIP:80)
-                       ↓
-    ┌──────────────────┴──────────────────┐
-    ↓                                     ↓
 
 
 
