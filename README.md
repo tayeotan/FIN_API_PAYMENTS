@@ -34,17 +34,17 @@ The application showcases modern DevOps practices including Infrastructure as Co
 
 ## 🏗️ Project Structure
 
-`server.ps1`: PowerShell HTTP server handling API requests
-`healthcheck.ps1`: Health check script for container probes
-`Dockerfile`: Container image definition
-`namespace.yaml`: Kubernetes namespace for resource isolation
-`deployment.yaml`: Deployment configuration with 2 replicas
-`service.yaml`: ClusterIP service exposing pods internally
-`ingress.yaml`: NGINX ingress for external access
-`deploy.yaml`: GitHub Actions CI/CD pipeline
-`build.ps1`: Local Docker build script
-`cleanup.ps1`: Cleanup script for testing
-`deploy.ps1`: Local deployment script
+- `server.ps1`: PowerShell HTTP server handling API requests
+- `healthcheck.ps1`: Health check script for container probes
+- `Dockerfile`: Container image definition
+- `namespace.yaml`: Kubernetes namespace for resource isolation
+- `deployment.yaml`: Deployment configuration with 2 replicas
+- `service.yaml`: ClusterIP service exposing pods internally
+- `ingress.yaml`: NGINX ingress for external access
+- `deploy.yaml`: GitHub Actions CI/CD pipeline
+- `build.ps1`: Local Docker build script
+- `cleanup.ps1`: Cleanup script for testing
+- `deploy.ps1`: Local deployment script
 
 ### File Descriptions
 
@@ -157,4 +157,5 @@ The application showcases modern DevOps practices including Infrastructure as Co
  - Add support for multiple payment methods
  - Integrate fraud detection using machine learning
  - Implement blue-green or canary deployment strategies
+
 
