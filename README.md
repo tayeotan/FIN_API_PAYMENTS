@@ -8,16 +8,16 @@ A production-ready payment processing API built with PowerShell, containerized w
 ### Endpoints
 
 #### 1. Health Check
-http
-GET /health
+`http
+GET /health`
 
-curl http://34.29.49.247/health
+`curl http://34.29.49.247/health`
 
 #### 2. Payment Approved Check
-POST /pay
-Content-Type: application/json
+`POST /pay
+Content-Type: application/json`
 
-curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": AMOUNT}' -UseBasicParsing
+`curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": AMOUNT}' -UseBasicParsing`
 
 
 **Steps to run in PowerShell to test through the Live API Endpoint on health check and payment approved check**:
@@ -199,6 +199,7 @@ The application showcases modern DevOps practices including Infrastructure as Co
  - Add support for multiple payment methods
  - Integrate fraud detection using machine learning
  - Implement blue-green or canary deployment strategies
+
 
 
 
