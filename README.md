@@ -132,4 +132,29 @@ The application showcases modern DevOps practices including Infrastructure as Co
 **Challenges Overcome**
 * Image Registry Networking: Resolved Docker push failures by using Cloud Build instead of Cloud Shell's Docker daemon
 * IAM Permissions: Properly configured service account roles for Artifact Registry and Cloud Build
-* Ingress Configuration: Set up NGINX Ingress Controller and LoadBalancer for external access 
+* Ingress Configuration: Set up NGINX Ingress Controller and LoadBalancer for external access
+
+---
+
+## 🔮 Future Enhancements
+**Short-Term Improvements**
+ - Add input validation for payment amount and currency
+ - Implement request logging to Cloud Logging
+ - Add Prometheus metrics endpoint for monitoring
+ - Configure Horizontal Pod Autoscaler (HPA) based on CPU usage
+ - Add TLS/HTTPS support with Let's Encrypt certificates
+
+**Medium-Term Features**
+ - Integrate with Cloud SQL for persistent transaction storage
+ - Add authentication/authorization with OAuth 2.0
+ - Implement rate limiting to prevent abuse
+ - Add distributed tracing with Cloud Trace
+ - Create Grafana dashboards for real-time monitoring
+
+**Long-Term Goals**
+ - Multi-region deployment for disaster recovery
+ - Implement event-driven architecture with Pub/Sub
+ - Add support for multiple payment methods
+ - Integrate fraud detection using machine learning
+ - Implement blue-green or canary deployment strategies
+
