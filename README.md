@@ -37,12 +37,10 @@ The application showcases modern DevOps practices including Infrastructure as Co
 `server.ps1`: PowerShell HTTP server handling API requests
 `healthcheck.ps1`: Health check script for container probes
 `Dockerfile`: Container image definition
-
 `namespace.yaml`: Kubernetes namespace for resource isolation
 `deployment.yaml`: Deployment configuration with 2 replicas
 `service.yaml`: ClusterIP service exposing pods internally
 `ingress.yaml`: NGINX ingress for external access
-
 `deploy.yaml`: GitHub Actions CI/CD pipeline
 `build.ps1`: Local Docker build script
 `cleanup.ps1`: Cleanup script for testing
@@ -115,9 +113,23 @@ The application showcases modern DevOps practices including Infrastructure as Co
 
 ---
 
+## 🔑 Key Takeaways
 
+**Technical Skills Developed**
+1. Container Orchestration: Successfully deployed and managed multi-replica applications on Kubernetes with automated rollouts and health monitoring
+2. Cloud-Native Architecture: Implemented scalable, resilient microservices architecture with proper resource limits and horizontal scaling capabilities
+3. Secure Authentication: Configured Workload Identity Federation for keyless, secure communication between GitHub Actions and GCP services
+4. Infrastructure as Code: Managed all infrastructure through declarative YAML manifests, enabling reproducible deployments
+5. CI/CD Automation: Built end-to-end automated pipeline from code commit to production deployment
 
+**DevOps Best Practices**
+* Separation of Concerns: Application code, infrastructure definitions, and CI/CD pipelines in separate directories
+* Health Monitoring: Implemented readiness and liveness probes for self-healing capabilities
+* Resource Management: Defined CPU and memory limits to prevent resource exhaustion
+* High Availability: Deployed multiple replicas with automatic load balancing
+* Security: Used Workload Identity instead of storing credentials in GitHub secrets
 
-
-
-
+**Challenges Overcome**
+* Image Registry Networking: Resolved Docker push failures by using Cloud Build instead of Cloud Shell's Docker daemon
+* IAM Permissions: Properly configured service account roles for Artifact Registry and Cloud Build
+* Ingress Configuration: Set up NGINX Ingress Controller and LoadBalancer for external access 
