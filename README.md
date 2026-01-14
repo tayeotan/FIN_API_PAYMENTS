@@ -34,7 +34,7 @@ curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="appl
   "transactionId": "a887b3f0-9528-4522-957b-8db55e7413f2"
 }`
 
-**Steps to run the Payment approved check (POST/pay) through Postman**:
+**Steps to run the payment approved check (POST/pay) through Postman**:
 
 1. Make sure to have in POST request and type the following URL `(http://34.29.49.247/pay)`
 2. In the Headers tab, make sure to check on `Content-Type: application/json` (can be defaulted mostly in Postman)
@@ -199,6 +199,7 @@ The application showcases modern DevOps practices including Infrastructure as Co
  - Add support for multiple payment methods
  - Integrate fraud detection using machine learning
  - Implement blue-green or canary deployment strategies
+
 
 
 
