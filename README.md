@@ -17,12 +17,28 @@ curl http://34.29.49.247/health
 POST /pay
 Content-Type: application/json
 
+curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": AMOUNT}
+
 
 **Use PowerShell to test through the Live API Endpoint on health checks and payment checks**:
 
 - Health check for Live API Endpoint: `curl http://34.29.49.247/health`
 
-- Payment approved check example: `curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": 100}'` (enter any amount to determine whether its approved or not approved (will result an error) of invalid amount.)
+- Payment approved check example: `curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": 100}'` (enter any amount to determine whether its approved or not approved (will result an error for invalid amount.))
+
+**Steps to run the Payment approved check (POST/pay) through Postman**:
+
+1. Make sure to have in POST request and type the following URL `(http://34.29.49.247/pay)`
+2. In the Headers tab, make sure to check on `Content-Type: application/json` (can be defaulted mostly in Postman)
+3. In the Body tab, make sure to have in `raw` and in JSON.
+4. Type the following example in JSON:
+`{
+  "amount": 100
+}`
+5. Finally, click the blue button to `Send`
+6. Make sure the output has showed the status and transaction in JSON to verify that the URL is functionable.
+
+
 
 
 
@@ -179,6 +195,7 @@ The application showcases modern DevOps practices including Infrastructure as Co
  - Add support for multiple payment methods
  - Integrate fraud detection using machine learning
  - Implement blue-green or canary deployment strategies
+
 
 
 
