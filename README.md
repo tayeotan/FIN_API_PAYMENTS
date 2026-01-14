@@ -13,7 +13,7 @@ GET /health
 
 curl http://34.29.49.247/health
 
-### 2. Payment Approved Check
+#### 2. Payment Approved Check
 POST /pay
 Content-Type: application/json
 
@@ -179,6 +179,7 @@ The application showcases modern DevOps practices including Infrastructure as Co
  - Add support for multiple payment methods
  - Integrate fraud detection using machine learning
  - Implement blue-green or canary deployment strategies
+
 
 
 
