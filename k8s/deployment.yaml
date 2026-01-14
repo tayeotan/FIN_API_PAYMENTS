@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: payment-api
-        image: taniaortiz0/payment-api:latest
+        image: us-central1-docker.pkg.dev/project-1d652b8e-9917-43c0-a20/payment-api-repo/payment-api:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
