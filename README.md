@@ -17,30 +17,34 @@ curl http://34.29.49.247/health
 POST /pay
 Content-Type: application/json
 
-curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": AMOUNT}
+curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": AMOUNT}' -UseBasicParsing
 
 
-**Use PowerShell to test through the Live API Endpoint on health checks and payment checks**:
+**Steps to run in PowerShell to test through the Live API Endpoint on health check and payment approved check**:
 
-- Health check for Live API Endpoint: `curl http://34.29.49.247/health`
+#### Instructions to test on health check
+1. Open Windows PowerShell
+2. Test the health check endpoint through this following command: `curl http://34.29.49.247/health`
+3. Press Enter and you'll see the health check as `OK`
 
-- Payment approved check example: `curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": 100}'` (enter any amount to determine whether its approved or not approved (will result an error for invalid amount.))
+#### Instructions to test on the payment approved check
+1. Copy and paste this following command example to run in PowerShell: `curl -Method POST -Uri "http://34.29.49.247/pay" -Headers @{"Content-Type"="application/json"} -Body '{"amount": 100}' -UseBasicParsing`
+2. Press Enter and you would see a response something like this: `{
+  "status": "approved",
+  "transactionId": "a887b3f0-9528-4522-957b-8db55e7413f2"
+}`
 
 **Steps to run the Payment approved check (POST/pay) through Postman**:
 
 1. Make sure to have in POST request and type the following URL `(http://34.29.49.247/pay)`
 2. In the Headers tab, make sure to check on `Content-Type: application/json` (can be defaulted mostly in Postman)
-3. In the Body tab, make sure to have in `raw` and in JSON.
+3. In the Body tab, make sure to have in `raw` and in `JSON`.
 4. Type the following example in JSON:
 `{
   "amount": 100
 }`
 5. Finally, click the blue button to `Send`
-6. Make sure the output has showed the status and transaction in JSON to verify that the URL is functionable.
-
-
-
-
+6. Make sure the output has showed the status and transaction in JSON to verify that the URL is functionable in a similar approach that PowerShell did.
 
 ---
 
@@ -195,6 +199,7 @@ The application showcases modern DevOps practices including Infrastructure as Co
  - Add support for multiple payment methods
  - Integrate fraud detection using machine learning
  - Implement blue-green or canary deployment strategies
+
 
 
 
